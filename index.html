@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Jogo</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="back" href="inicio.html">← Voltar</a>
+        <div class="header-text">
+            <h1>Eco Jogo</h1>
+            <p>Salve o planeta com perguntas e movimentos no tabuleiro.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="board-section">
+            <div class="board" id="board" aria-label="Tabuleiro do jogo"></div>
+        </section>
+
+        <section class="game-panel">
+            <div class="game-info">
+                <p>Dificuldade: <strong id="difficultyLabel">Fácil</strong></p>
+                <p>Posição atual: <strong id="position">1</strong></p>
+                <p>Resultado do dado: <strong id="diceValue">-</strong></p>
+            </div>
+
+            <button id="rollButton">Lançar dado</button>
+            <div class="log" id="log">Clique em "Lançar dado" para começar.</div>
+
+            <div class="question-card hidden" id="questionCard">
+                <p id="questionText"></p>
+                <div class="answers" id="answers"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

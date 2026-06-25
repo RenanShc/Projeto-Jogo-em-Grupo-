@@ -1,0 +1,69 @@
+/* Estilos para inicio.html */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #d8f3dc, #ffffff);
+    display: grid;
+    place-items: center;
+}
+
+.bootes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: min(90vw, 480px);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bootes button {
+    width: 100%;
+    border: none;
+    border-radius: 0.85rem;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #2d6b4b;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bootes button:hover {
+    background: #23543c;
+    transform: translateY(-1px);
+}
+
+.bootes h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #1f3d2e;
+}
+
+.bootes p {
+    margin: 0;
+    color: #3b5f4d;
+    text-align: center;
+}
+
+.dificuldade {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.dificuldade button {
+    flex: 1;
+    background: #88b28c;
+    color: #1f3d2e;
+    border: 2px solid transparent;
+}
+
+.dificuldade button.active {
+    border-color: #2d6b4b;
+    background: #c7e5d8;
+}

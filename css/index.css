@@ -1,0 +1,181 @@
+/* Estilos para index.html */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #daf7dc, #eef9f2);
+    color: #1f3d2e;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #cddcd2;
+}
+
+.topbar .back {
+    text-decoration: none;
+    color: #1f3d2e;
+    font-weight: 700;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header-text p {
+    margin: 0.25rem 0 0;
+    color: #3b5f4d;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.board-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.board-square {
+    position: relative;
+    background: #f7fff6;
+    border: 2px solid #c8e2d0;
+    min-height: 6rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.board-square:hover {
+    transform: translateY(-2px);
+}
+
+.square-label {
+    font-weight: 700;
+    color: #1f3d2e;
+}
+
+.board-square.rampa {
+    background: linear-gradient(135deg, #d1f7d3, #b4e7c1);
+}
+
+.board-square.cobra {
+    background: linear-gradient(135deg, #fce8d8, #f7d1bb);
+}
+
+.board-square.pergunta {
+    background: linear-gradient(135deg, #e0f1ff, #d3e9ff);
+}
+
+.token {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #3b5f4d;
+}
+
+.game-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.game-info {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #cddcd2;
+    border-radius: 0.75rem;
+    background: #f7fff6;
+}
+
+button {
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    background: #4a8f6c;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: #3f7c5d;
+}
+
+.log {
+    min-height: 4rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #eef6ee;
+    color: #1f3d2e;
+}
+
+.question-card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #cddcd2;
+}
+
+.question-card.hidden {
+    display: none;
+}
+
+.question-card p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.answers {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.answers button {
+    background: #2d6b4b;
+}
+
+.answers button:hover {
+    background: #23543c;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
